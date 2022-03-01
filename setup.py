@@ -1,11 +1,11 @@
-"""Python setup.py for gladier_client package"""
+"""Python setup.py for my_gladier_client package"""
 import io
 import os
 from setuptools import find_packages, setup
 
 # single source of truth for package version
 version_ns = {}
-with open(os.path.join('gladier_client', 'version.py')) as f:
+with open(os.path.join('my_gladier_client', 'version.py')) as f:
     exec(f.read(), version_ns)
 version = version_ns['__version__']
 
@@ -18,10 +18,10 @@ with open('requirements.txt') as reqs:
         install_requires.append(req)
 
 setup(
-    name='gladier_client',
+    name='my_gladier_client',
     description='Gladier Client Template',
-    url='https://github.com/globus-gladier/gladier-client-template',
-    maintainer='The Gladier Team',
+    url='https://github.com/NickolausDS/my-gladier-client',
+    maintainer='NickolausDS',
     maintainer_email='',
     version=version_ns['__version__'],
     packages=find_packages(exclude=["tests", ".github"]),
